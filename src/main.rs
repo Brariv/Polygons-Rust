@@ -29,7 +29,7 @@ fn main() {
         line::line(&mut framebuffer, start, end, Color::WHITE);
     }
 
-    fill::fill(&mut framebuffer, &polygon_points, Color::WHITE);
+    fill::fill(&mut framebuffer, &polygon_points, Color::YELLOW);
 
 
     framebuffer.draw_image("out.bmp");

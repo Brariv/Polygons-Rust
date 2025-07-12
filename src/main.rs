@@ -32,7 +32,7 @@ fn main() {
     fill::fill(&mut framebuffer, &polygon_points, Color::WHITE);
 
 
-    framebuffer.draw_image("output.png");
+    framebuffer.draw_image("out.bmp");
     println!("Drawing complete!");
     
 

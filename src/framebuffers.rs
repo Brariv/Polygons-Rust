@@ -29,20 +29,20 @@ impl FrameBuffer {
         }
     }
 
-    pub fn get_pixel(&self, x: i32, y: i32) -> Color {
-        if x >= 0 && x < self.image_width && y >= 0 && y < self.image_height {
-            let image_data = self.new_image.get_image_data();
-            let idx = (y * self.image_width + x) as usize;
-            if idx < image_data.len() {
-                image_data[idx]
-            } else {
-                Color::BLANK
-            }
-        }
-        else {
-            Color::BLANK
-        }
-    }
+    // pub fn get_pixel(&self, x: i32, y: i32) -> Color {
+    //     if x >= 0 && x < self.image_width && y >= 0 && y < self.image_height {
+    //         let image_data = self.new_image.get_image_data();
+    //         let idx = (y * self.image_width + x) as usize;
+    //         if idx < image_data.len() {
+    //             image_data[idx]
+    //         } else {
+    //             Color::BLANK
+    //         }
+    //     }
+    //     else {
+    //         Color::BLANK
+    //     }
+    // }
 
     pub fn draw_image(&self, output_file_name: &str) {
         self.new_image.export_image(output_file_name);

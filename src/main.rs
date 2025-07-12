@@ -9,18 +9,12 @@ fn main() {
     let mut framebuffer = framebuffers::FrameBuffer::new(800, 600, Color::BLACK);
     
 
-    // (165, 380) (185, 360) (180, 330) (207, 345) (233, 330) (230, 360) (250, 380) (220, 385) (205, 410) (193, 383)
+    // (321, 335) (288, 286) (339, 251) (374, 302)
     let polygon_points = [
-        Vector2::new(165.0, 380.0),
-        Vector2::new(185.0, 360.0),
-        Vector2::new(180.0, 330.0),
-        Vector2::new(207.0, 345.0),
-        Vector2::new(233.0, 330.0),
-        Vector2::new(230.0, 360.0),
-        Vector2::new(250.0, 380.0),
-        Vector2::new(220.0, 385.0),
-        Vector2::new(205.0, 410.0),
-        Vector2::new(193.0, 383.0),
+        Vector2::new(321.0, 335.0),
+        Vector2::new(288.0, 286.0),
+        Vector2::new(339.0, 251.0),
+        Vector2::new(374.0, 302.0)
     ];
 
     for i in 0..polygon_points.len() {
@@ -29,7 +23,7 @@ fn main() {
         line::line(&mut framebuffer, start, end, Color::WHITE);
     }
 
-    fill::fill(&mut framebuffer, &polygon_points, Color::WHITE);
+    fill::fill(&mut framebuffer, &polygon_points, Color::BLUE);
 
 
     framebuffer.draw_image("out.bmp");
